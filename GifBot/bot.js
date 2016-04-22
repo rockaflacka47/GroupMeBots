@@ -17,7 +17,7 @@ function respond() {
     if(!(sanityCheck.test(search))) {
       postMessage("NO, you're trying to hack me :(");
     } else {
-      var theURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=1";
+      var theURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=5";
       var temp;
       getGif(theURL, function(result){
         console.log("echo " + result);
@@ -44,7 +44,8 @@ function getGif(url, callback) {
     if(!er) {
       var temp = bdy;
       try {
-        callback(temp.data[0].images.original.url);
+        var rand = Math.floor(Math.random() * (5 - 0) + 0);
+        callback(temp.data[rand].images.original.url);
       } catch (ex) {
         console.log("No such element");
       }
