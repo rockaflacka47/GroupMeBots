@@ -12,12 +12,19 @@ function respond() {
     var search = request.text.replace("/gif ", "");
     search = request.text.replace("/gif", "");
     search = search.replace(" ","");
-    var theURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=1";
-    var temp;
-    getGif(theURL, function(result){
-      console.log("echo " + result);
-      postMessage(result);
-    });
+    var sanityCheck = /^[a-zA-Z0-9 ]+$/;
+    console.log(!(sanityCheck.test(search)));
+    if(!(sanityCheck.test(search))) {
+      postMessage("NO, you're trying to hack me :(");
+    } else {
+      var theURL = "http://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=1";
+      var temp;
+      getGif(theURL, function(result){
+        console.log("echo " + result);
+        postMessage(result);
+      });
+    }
+
     this.res.writeHead(200);
     //postMessage(theURL);
     this.res.end();
