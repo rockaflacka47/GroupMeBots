@@ -5,12 +5,17 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/;
-
-  if(request.text && botRegex.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
+      botRegex = /devBot/;
+      console.log("\n\n" + request.name);
+      console.log(request.sender_id);
+  if(request.text && botRegex.test(request.text) && request.name != "devBot") {
+      this.res.writeHead(200);
+      if(request.sender_id != 22774873){
+        postMessage(0);
+      }else {
+        postMessage(1);
+      }
+      this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -18,11 +23,14 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(resNum) {
   var botResponse, options, body, botReq;
-
-  botResponse = cool();
-
+  if(resNum == 0){
+    botResponse = "Hi dude, I'm devBot. Eventually I'll do stuff but rn I'm sleeping. Night!";
+  }
+  else{
+    botResponse = "STFU DOM, don't tell me what to do!"
+  }
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
