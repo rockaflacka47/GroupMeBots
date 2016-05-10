@@ -3,6 +3,7 @@ var defBot = require('./def_bot.js');
 
 
 function respond() {
+  console.log("Request Recieved by bot.js");
   var request = JSON.parse(this.req.chunks[0]);
     //Regular Expresions
     coolGuyRegex = /^\/cool guy$/;
@@ -12,8 +13,9 @@ function respond() {
     if(request.text && gifBotRegex.test(request.text)) {
     }
     else if(request.text && defBotRegex.test(request.text)){
-      console.log("\n\n" + request.text);
+      console.log(request.text);
       console.log(request.sender_id);
+      console.log("Sending request to defBot");
       defBot.respond(request.text);
     }
     else if(request.text && coolGuyRegex.test(request.text)){

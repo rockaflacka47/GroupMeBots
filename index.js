@@ -7,6 +7,7 @@ director    = require('director');
 cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 
+console.log("Request Recieved by index.js");
 router = new director.http.Router({
       '/' : {
         post: bot.respond,
