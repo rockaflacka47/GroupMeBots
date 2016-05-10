@@ -1,6 +1,8 @@
 var http, director, cool, bot, router, server, port;
 
+
 //DEPENDECIES
+request     = require('request');
 http        = require('http');
 director    = require('director');
 cool        = require('cool-ascii-faces');
