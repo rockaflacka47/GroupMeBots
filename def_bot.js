@@ -3,7 +3,7 @@ var urban = require('urban');
 var botID = process.env.DEF_BOT_ID;
 
 function respond(request) {
-      postMessage(request.text.replace("/define ", ""));
+      postMessage(request.replace("/define ", ""));
 }
 
 function postMessage(word) {
