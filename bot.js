@@ -1,5 +1,4 @@
 var HTTPS = require('https');
-var request = require('request');
 var defBot = require('def_bot.js');
 
 
@@ -18,7 +17,7 @@ function respond() {
       defBot.respond(request.text);
     }
     else if(request.text && coolGuyRegex.test(request.text)){
-      
+
     this.res.writeHead(200);
     //postMessage(theURL);
     this.res.end();
