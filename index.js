@@ -2,12 +2,10 @@ var http, director, cool, bot, router, server, port;
 
 
 //DEPENDECIES
-request     = require('request');
 http        = require('http');
 director    = require('director');
 cool        = require('cool-ascii-faces');
-bot     = require('./bot.js');
-var request = JSON.parse(this.req.chunks[0]);
+bot         = require('./bot.js');
 
 router = new director.http.Router({
       '/' : {
