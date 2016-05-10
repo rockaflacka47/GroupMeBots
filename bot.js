@@ -11,6 +11,7 @@ function respond() {
     gifBotRegex = /^\/gif*/;
 
     if(request.text && gifBotRegex.test(request.text)) {
+      
     }
     else if(request.text && defBotRegex.test(request.text)){
       console.log(request.text);
@@ -19,10 +20,9 @@ function respond() {
       defBot.respond(request.text);
     }
     else if(request.text && coolGuyRegex.test(request.text)){
+
     }
-
-
-    } else {
+    else {
     console.log("don't care");
   }
   this.res.writeHead(200);
