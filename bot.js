@@ -1,5 +1,5 @@
 var HTTPS = require('https');
-var defBot = require('def_bot.js');
+var defBot = require('./def_bot.js');
 
 
 function respond() {
