@@ -6,34 +6,12 @@ request     = require('request');
 http        = require('http');
 director    = require('director');
 cool        = require('cool-ascii-faces');
-coolGuy     = require('./cool_guy.js');
-defBot      = require('./def_bot.js');
-gifBot      = require('./gif_bot.js');
+bot     = require('./bot.js');
 var request = JSON.parse(this.req.chunks[0]);
+
 router = new director.http.Router({
-
-//Regular Expresions
-  coolGuyRegex = /^\/cool guy$/;
-  defBotRegex = /^\/define /;
-  gifBotRegex = /^\/gif*/;
-
-//RegEx Checks
-  if(request.text){
-    if(coolGuyRegex.test(request.text)){
       '/' : {
-          post: coolGuy.respond,
-          get: ping
-      }
-    }
-    else if(defBotRegex.test(request.text)){
-      '/' : {
-        post: defBot.respond,
-        get: ping
-      }
-    }
-    else{
-      '/' : {
-        post: gifBot.respond,
+        post: bot.respond,
         get: ping
       }
     }
