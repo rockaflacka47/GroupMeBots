@@ -4,7 +4,7 @@ var http, director, cool, bot, router, server, port;
 //DEPENDECIES
 http        = require('http');
 director    = require('director');
-cool        = require('cool-ascii-faces');
+urban       = require('urban');
 bot         = require('./bot.js');
 
 console.log("Request Recieved by index.js");
