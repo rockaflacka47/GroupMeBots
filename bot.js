@@ -19,14 +19,12 @@ function respond() {
       defBot.respond(request.text);
     }
     else if(request.text && coolGuyRegex.test(request.text)){
+    }
 
-    this.res.writeHead(200);
-    //postMessage(theURL);
-    this.res.end();
 
     } else {
     console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
   }
+  this.res.writeHead(200);
+  this.res.end();
 }
