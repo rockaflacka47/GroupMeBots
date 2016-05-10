@@ -29,3 +29,4 @@ function respond() {
     }
 
 }
+xports.respond = respond;
