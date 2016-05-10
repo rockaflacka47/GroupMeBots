@@ -2,16 +2,16 @@ var http, director, cool, bot, router, server, port;
 
 
 //DEPENDECIES
-var request     = require('request');
-var http        = require('http');
-var director    = require('director');
-var cool        = require('cool-ascii-faces');
-var coolGuy     = require('./cool_guy.js');
-var defBot      = require('./def_bot.js');
-var gifBot      = require('./gif_bot.js');
-
+request     = require('request');
+http        = require('http');
+director    = require('director');
+cool        = require('cool-ascii-faces');
+coolGuy     = require('./cool_guy.js');
+defBot      = require('./def_bot.js');
+gifBot      = require('./gif_bot.js');
+var request = JSON.parse(this.req.chunks[0]);
 router = new director.http.Router({
-  var request = JSON.parse(this.req.chunks[0]);
+
 //Regular Expresions
   coolGuyRegex = /^\/cool guy$/;
   defBotRegex = /^\/define /;
