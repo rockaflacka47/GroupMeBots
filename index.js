@@ -14,8 +14,6 @@ router = new director.http.Router({
         post: bot.respond,
         get: ping
       }
-    }
-  }
 });
 
 server = http.createServer(function (req, res) {

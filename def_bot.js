@@ -2,10 +2,7 @@ var HTTPS = require('https');
 var urban = require('urban');
 var botID = process.env.DEF_BOT_ID;
 
-function respond() {
-  var request = JSON.parse(this.req.chunks[0]);
-      console.log("\n\n" + request.name);
-      console.log(request.sender_id);
+function respond(request) {
       this.res.writeHead(200);
       postMessage(request.text.replace("/define ", ""));
       this.res.end();
