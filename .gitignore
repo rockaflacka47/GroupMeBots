@@ -3,5 +3,3 @@
 # on git, you can also add local files
 # that you don't want to push
 node_modules
-defBot/node_modules
-defBot/.git
