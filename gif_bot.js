@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 //var gif = require('./gif');
-var request = require('request');
+//var request = require('request');
 var botID = process.env.GIF_BOT_ID;
 
 function respond(request) {
