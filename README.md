@@ -1,6 +1,7 @@
 # Pitt CS people GroupMe Bot
 
 This is a library of bots used in GroupMe, written in NodeJS, and hosted on heroku.
+
 Link to Groupme's Bot Api: https://dev.groupme.com/tutorials/bots
 
 Cool Guy
