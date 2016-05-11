@@ -20,10 +20,10 @@ function postMessage(word) {
       console.log(typeof json);
       console.log(json.definition);
       if(explitiveRegex.test(json.definition)){
-        sendDef(word);
+        sendDef("That's vulgar, I'm not reading that to you.");
       }
       else{
-        sendDef("That's vulgar, I'm not reading that to you.");
+        sendDef(json.definition);
       }
     }
     });
