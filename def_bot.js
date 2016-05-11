@@ -1,7 +1,7 @@
 var HTTPS = require('https');
 var urban = require('urban');
 var botID = process.env.DEF_BOT_ID;
-
+var explitiveRegex = /.*rap(e|ist|ing).*/;//Use this regex to create a blacklist
 function respond(request) {
       postMessage(request.replace("/define ", ""));
 }
@@ -19,7 +19,12 @@ function postMessage(word) {
       else{
       console.log(typeof json);
       console.log(json.definition);
-      sendDef(json.definition);
+      if(explitiveRegex.test(json.definition.text)){
+        sendDef(word);
+      }
+      else{
+        sendDef(json.definition);
+      }
     }
     });
   }catch(ex){
