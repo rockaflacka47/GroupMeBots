@@ -23,7 +23,7 @@ Implements the Giphy API to post a gif when "/gif <search>" is typed
 Def Bot
 -------
 
-Made by: Alex
+Made by: [Alex](https://github.com/AKD40)
 
 Implements the Urban Dictionary API to post the definition of a word when "/define <word>" is typed
 
