@@ -1,6 +1,7 @@
 var HTTPS = require('https');
 var defBot = require('./def_bot.js');
 var gifBot = require('./gif_bot.js');
+var coolGuy = require('./cool_guy.js');
 
 
 function respond() {
@@ -28,7 +29,12 @@ function respond() {
       defBot.respond(request.text);
     }
     else if(request.text && coolGuyRegex.test(request.text)){
-
+      this.res.writeHead(200);
+      this.res.end();
+      console.log(request.text);
+      console.log(request.sender_id);
+      console.log("Sending request to coolGuy");
+      coolGuy.respond(request.text);
     }
     else {
     console.log("don't care");
