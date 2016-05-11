@@ -15,7 +15,7 @@ Prints an emoticon to chat when "/cool guy" is typed
 Gif Bot
 -------
 
-Made by: Dom
+Made by: [Dom](https://github.com/domtheporcupine)
 
 Implements the Giphy API to post a gif when "/gif <search>" is typed
 
