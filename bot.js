@@ -11,7 +11,12 @@ function respond() {
     gifBotRegex = /^\/gif*/;
 
     if(request.text && gifBotRegex.test(request.text)) {
-
+      this.res.writeHead(200);
+      this.res.end();
+      console.log(request.text);
+      console.log(request.sender_id);
+      console.log("Sending request to gifBot");
+      gifBot.respond(request.text);
     }
     else if(request.text && defBotRegex.test(request.text)){
       this.res.writeHead(200);
