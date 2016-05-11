@@ -19,7 +19,7 @@ function postMessage(word) {
       else{
       console.log(typeof json);
       console.log(json.definition);
-      if(explitiveRegex.test(json.definition.text)){
+      if(explitiveRegex.test(json.definition)){
         sendDef(word);
       }
       else{
