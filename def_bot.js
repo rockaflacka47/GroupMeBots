@@ -23,7 +23,7 @@ function postMessage(word) {
         sendDef(word);
       }
       else{
-        sendDef(json.definition);
+        sendDef("That's vulgar, I'm not reading that to you.");
       }
     }
     });
