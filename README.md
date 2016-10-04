@@ -2,6 +2,8 @@
 
 This is a library of bots used in GroupMe, written in NodeJS, and hosted on heroku.
 
+Note: the reason there are so many commits is because commits are required to update heroku and Pitt's wifi won't allow local hosting for testing.
+
 Link to Groupme's Bot Api: https://dev.groupme.com/tutorials/bots
 
 Cool Guy
